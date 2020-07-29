@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Application-->
+        <scene sceneID="JPo-4y-FX3">
+            <objects>
+                <application id="hnw-xV-0zn" sceneMemberID="viewController">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6">
+                        <items>
+                            <menuItem title="RollBack" id="1Xt-HY-uBw">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="RollBack" systemMenu="apple" id="uQy-DD-JDr">
+                                    <items>
+                                        <menuItem title="About RollBack" id="5kV-Vb-QxS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="orderFrontStandardAboutPanel:" target="Ady-hI-5gd" id="Exp-CZ-Vem"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="VOq-y0-SEH"/>
+                                        <menuItem title="Preferences…" keyEquivalent="," id="BOF-NM-1cW"/>
+                                        <menuItem isSeparatorItem="YES" id="wFC-TO-SCJ"/>
+                                        <menuItem title="Services" id="NMo-om-nkz">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="Services" systemMenu="services" id="hz9-B4-Xy5"/>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="4je-JR-u6R"/>
+                                        <menuItem title="Hide RollBack" keyEquivalent="h" id="Olw-nP-bQN">
+                                            <connections>
+                                                <action selector="hide:" target="Ady-hI-5gd" id="PnN-Uc-m68"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Hide Others" keyEquivalent="h" id="Vdr-fp-XzO">
+                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                            <connections>
+                                                <action selector="hideOtherApplications:" target="Ady-hI-5gd" id="VT4-aY-XCT"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Show All" id="Kd2-mp-pUS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="unhideAllApplications:" target="Ady-hI-5gd" id="Dhg-Le-xox"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="kCx-OE-vgT"/>
+                                        <menuItem title="Quit RollBack" keyEquivalent="q" id="4sb-4s-VLi">
+                                            <connections>
+                                                <action selector="terminate:" target="Ady-hI-5gd" id="Te7-pn-YzF"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Window" id="aUF-d1-5bR">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Window" systemMenu="window" id="Td7-aD-5lo">
+                                    <items>
+                                        <menuItem title="Minimize" keyEquivalent="m" id="OY7-WF-poV">
+                                            <connections>
+                                                <action selector="performMiniaturize:" target="Ady-hI-5gd" id="VwT-WD-YPe"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Zoom" id="R4o-n2-Eq4">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="performZoom:" target="Ady-hI-5gd" id="DIl-cC-cCs"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem isSeparatorItem="YES" id="eu3-7i-yIM"/>
+                                        <menuItem title="Bring All to Front" id="LE2-aR-0XJ">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="arrangeInFront:" target="Ady-hI-5gd" id="DRN-fu-gQh"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                            <menuItem title="Help" id="wpr-3q-Mcd">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
+                                    <items>
+                                        <menuItem title="RollBack Help" keyEquivalent="?" id="FKE-Sm-Kum">
+                                            <connections>
+                                                <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
+                    </connections>
+                </application>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="RollBackIcons" customModuleProvider="target"/>
+                <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+                <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="0.0"/>
+        </scene>
+        <!--Window Controller-->
+        <scene sceneID="R2V-B0-nI4">
+            <objects>
+                <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
+                    <window key="window" title="RollBack" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
+                        <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <connections>
+                            <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
+                        </connections>
+                    </window>
+                    <connections>
+                        <segue destination="XfG-lQ-9wD" kind="relationship" relationship="window.shadowedContentViewController" id="cq2-FE-JQM"/>
+                    </connections>
+                </windowController>
+                <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="75" y="250"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="hIz-AP-VOD">
+            <objects>
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="RollBackIcons" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="T5V-9i-IsH">
+                                <rect key="frame" x="228" y="152" width="116" height="26"/>
+                                <popUpButtonCell key="cell" type="push" title="macOS 10.16" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="oxV-1M-bFn" id="KW2-4w-Tki">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="djR-f6-8Yc">
+                                        <items>
+                                            <menuItem title="macOS 10.16" state="on" id="oxV-1M-bFn"/>
+                                            <menuItem title="macOS 10.15" id="jkI-5y-KkU"/>
+                                            <menuItem title="macOS 10.14" id="HTh-aL-Hb7"/>
+                                            <menuItem title="macOS 10.13" id="UBc-LN-Avm"/>
+                                            <menuItem title="macOS 10.12" id="FDF-tD-8vI"/>
+                                            <menuItem title="macOS 10.11" id="YVb-yq-k03"/>
+                                            <menuItem title="macOS 10.10" id="r4T-Tz-mC1"/>
+                                            <menuItem title="macOS 10.9" id="tot-LA-uxY"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="FJS-5O-dgs">
+                                <rect key="frame" x="131" y="214" width="218" height="26"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Welcome to RollBack" id="zmS-i5-vWf">
+                                    <font key="font" size="21" name="HelveticaNeue-Bold"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8Uj-Gx-mCy">
+                                <rect key="frame" x="170" y="196" width="140" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Created by @InterFyre" id="21f-Zh-lmd">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="B4V-8o-ejX">
+                                <rect key="frame" x="386" y="6" width="80" height="32"/>
+                                <buttonCell key="cell" type="push" title="Revert" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="llG-1e-9Ph">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2Cq-Ky-ak2">
+                                <rect key="frame" x="187" y="113" width="108" height="32"/>
+                                <buttonCell key="cell" type="push" title="Roll It Back" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="k2F-jZ-RRO">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aBw-Kq-dAp">
+                                <rect key="frame" x="16" y="6" width="77" height="32"/>
+                                <buttonCell key="cell" type="push" title="About" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="NvP-hI-itn">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="De5-qT-rg3">
+                                <rect key="frame" x="131" y="16" width="149" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Current macOS version:" id="asS-wB-Fll" userLabel="Version">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="nKG-Va-NEO">
+                                <rect key="frame" x="149" y="158" width="75" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Rollback to:" id="JJG-UT-cva">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sB2-Ob-d8D">
+                                <rect key="frame" x="286" y="16" width="47" height="17"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" identifier="versionnumber" title="10.13.6" id="JZW-7G-vWN">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="aBw-Kq-dAp" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="22" id="1cv-z7-Rrw"/>
+                            <constraint firstItem="8Uj-Gx-mCy" firstAttribute="centerX" secondItem="FJS-5O-dgs" secondAttribute="centerX" id="7QZ-rq-Um1"/>
+                            <constraint firstItem="FJS-5O-dgs" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="133" id="HCH-5l-Eu0"/>
+                            <constraint firstItem="2Cq-Ky-ak2" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="193" id="K1Y-5M-DcO"/>
+                            <constraint firstAttribute="bottom" secondItem="De5-qT-rg3" secondAttribute="bottom" constant="16" id="Kpc-Wc-FkL"/>
+                            <constraint firstItem="T5V-9i-IsH" firstAttribute="top" secondItem="8Uj-Gx-mCy" secondAttribute="bottom" constant="20" id="LQA-jC-uYw"/>
+                            <constraint firstItem="8Uj-Gx-mCy" firstAttribute="top" secondItem="FJS-5O-dgs" secondAttribute="bottom" constant="1" id="OBm-yz-x00"/>
+                            <constraint firstAttribute="bottom" secondItem="aBw-Kq-dAp" secondAttribute="bottom" constant="13" id="ORH-Gr-9mD"/>
+                            <constraint firstItem="FJS-5O-dgs" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="30" id="R7e-wn-y0H"/>
+                            <constraint firstItem="nKG-Va-NEO" firstAttribute="top" secondItem="8Uj-Gx-mCy" secondAttribute="bottom" constant="21" id="TI7-bD-FB8"/>
+                            <constraint firstItem="nKG-Va-NEO" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="151" id="YrV-sG-myT"/>
+                            <constraint firstAttribute="trailing" secondItem="B4V-8o-ejX" secondAttribute="trailing" constant="20" id="duU-dD-Gav"/>
+                            <constraint firstItem="2Cq-Ky-ak2" firstAttribute="top" secondItem="T5V-9i-IsH" secondAttribute="bottom" constant="14" id="jjw-sU-COe"/>
+                            <constraint firstAttribute="trailing" secondItem="FJS-5O-dgs" secondAttribute="trailing" constant="133" id="kKp-YE-aLO"/>
+                            <constraint firstItem="De5-qT-rg3" firstAttribute="leading" secondItem="aBw-Kq-dAp" secondAttribute="trailing" constant="46" id="l10-Im-WVx"/>
+                            <constraint firstAttribute="bottom" secondItem="B4V-8o-ejX" secondAttribute="bottom" constant="13" id="pQf-7u-GSB"/>
+                            <constraint firstItem="T5V-9i-IsH" firstAttribute="leading" secondItem="nKG-Va-NEO" secondAttribute="trailing" constant="8" id="ruX-yG-0av"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <popUpButtonCell type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Cju-sg-sUA" id="nPK-0k-C9s">
+                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                    <font key="font" metaFont="menu"/>
+                    <menu key="menu" id="5wk-mv-ccb">
+                        <items>
+                            <menuItem title="Item 1" state="on" id="Cju-sg-sUA"/>
+                            <menuItem title="Item 2" id="xM5-OJ-U3j"/>
+                            <menuItem title="Item 3" id="zBY-vM-cgC"/>
+                        </items>
+                    </menu>
+                </popUpButtonCell>
+                <popUpButtonCell type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Mxm-EW-4w6" id="uMZ-HQ-3YA">
+                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                    <font key="font" metaFont="menu"/>
+                    <menu key="menu" id="gt1-ov-P7G">
+                        <items>
+                            <menuItem title="Item 1" state="on" id="Mxm-EW-4w6"/>
+                            <menuItem title="Item 2" id="3rm-qv-dVK"/>
+                            <menuItem title="Item 3" id="3bR-F4-1DL"/>
+                        </items>
+                    </menu>
+                </popUpButtonCell>
+            </objects>
+            <point key="canvasLocation" x="75" y="655"/>
+        </scene>
+    </scenes>
+</document>
